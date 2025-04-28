@@ -13,7 +13,7 @@ public class GatewayConfig {
 	public RouteLocator myRoutes(RouteLocatorBuilder builder) {
 		return builder.routes()
 				.route(p -> p
-						.path("/User/NewUser")
+						.path("/user/newUser")
 						.and()
 						.method(HttpMethod.POST)
 						.uri("lb://user-service"))

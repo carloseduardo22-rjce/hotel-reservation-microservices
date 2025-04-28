@@ -1,4 +1,4 @@
-package com.carloseduardo.user_service.entities;
+package com.carloseduardo.user_service.entitie;
 
 import jakarta.persistence.*;
 

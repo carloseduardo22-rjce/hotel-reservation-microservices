@@ -15,6 +15,9 @@ public class Room {
 	private String number;
 	private BigDecimal pricePerNight;
 	private String type;
+	
+	public Room() {
+	}
 
 	public Room(Integer id, String number, BigDecimal pricePerNight, String type) {
 		super();

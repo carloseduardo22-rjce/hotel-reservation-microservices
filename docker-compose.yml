@@ -9,6 +9,7 @@ services:
       - "89:80"
     networks:
       - postgres-network
+
   postgres_user:
     image: postgres:latest
     container_name: postgres_container_user
@@ -18,6 +19,7 @@ services:
       - "5432:5432"
     networks:
       - postgres-network
+
   postgres_room:
     image: postgres:latest
     container_name: postgres_container_room
@@ -29,6 +31,17 @@ services:
       - postgres-network
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
+
+  postgres_reservation:
+    image: postgres:latest
+    container_name: postgres_container_reservation
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5434:5432"
+    networks:
+      - postgres-network
+
 networks:
   postgres-network:
     driver: bridge

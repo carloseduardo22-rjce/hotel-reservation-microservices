@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.carloseduardo.user_service.dto.ReservationDTO;
 import com.carloseduardo.user_service.dto.RoomDTO;
 import com.carloseduardo.user_service.entitie.User;
 import com.carloseduardo.user_service.service.UserService;
@@ -46,6 +47,11 @@ public class UserController {
 			CustomResponse<User> errorResponse = new CustomResponse<>(false, 400, "Error when created new Author!", currentDate);
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
 		}
+	}
+	
+	@PostMapping(value = "/reservation")
+	public String newReservation (@RequestBody ReservationDTO reservationDTO) {
+		return userService.newReservation(reservationDTO);
 	}
 	
 }

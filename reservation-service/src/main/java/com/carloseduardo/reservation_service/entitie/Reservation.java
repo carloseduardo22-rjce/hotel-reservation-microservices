@@ -1,5 +1,7 @@
 package com.carloseduardo.reservation_service.entitie;
 
+import java.util.UUID;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -7,8 +9,8 @@ import jakarta.persistence.*;
 public class Reservation {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private UUID id;
 	
 	private String emailUser;
 	private String numberRoom;
@@ -18,8 +20,7 @@ public class Reservation {
 	public Reservation() {
 	}
 
-	public Reservation(Integer id, String emailUser, String numberRoom, boolean payment, String typeRoom) {
-		super();
+	public Reservation(UUID id, String emailUser, String numberRoom, boolean payment, String typeRoom) {
 		this.id = id;
 		this.emailUser = emailUser;
 		this.numberRoom = numberRoom;
@@ -27,11 +28,11 @@ public class Reservation {
 		this.typeRoom = typeRoom;
 	}
 
-	public Integer getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 

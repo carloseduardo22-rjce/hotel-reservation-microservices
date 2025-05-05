@@ -10,3 +10,4 @@ This project is intended for my studies of microservices with Spring. The techno
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
+Still under construction, I will also add the architecture diagram here... 🚧

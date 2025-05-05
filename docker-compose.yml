@@ -10,37 +10,17 @@ services:
     networks:
       - postgres-network
 
-  postgres_user:
+  postgres:
     image: postgres:latest
-    container_name: postgres_container_user
+    container_name: postgres_container
     environment:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
     networks:
       - postgres-network
-
-  postgres_room:
-    image: postgres:latest
-    container_name: postgres_container_room
-    environment:
-      - POSTGRES_PASSWORD=postgres
-    ports:
-      - "5433:5432"
-    networks:
-      - postgres-network
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
-
-  postgres_reservation:
-    image: postgres:latest
-    container_name: postgres_container_reservation
-    environment:
-      - POSTGRES_PASSWORD=postgres
-    ports:
-      - "5434:5432"
-    networks:
-      - postgres-network
 
 networks:
   postgres-network:

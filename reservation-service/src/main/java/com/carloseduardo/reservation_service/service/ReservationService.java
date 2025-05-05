@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import com.carloseduardo.reservation_service.entitie.Reservation;
 import com.carloseduardo.reservation_service.repository.ReservationRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class ReservationService {
 
@@ -14,6 +16,7 @@ public class ReservationService {
 		this.reservationRepository = reservationRepository;
 	}
 	
+	@Transactional
 	public String newReservation(Reservation reservation) {
 		reservationRepository.save(reservation);
 		return "Reservation saved sucessfuly!";

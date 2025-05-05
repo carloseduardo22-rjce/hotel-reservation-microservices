@@ -1,0 +1,2 @@
+# The email service application.properties contains sensitive broker information.
+email-service/application.properties

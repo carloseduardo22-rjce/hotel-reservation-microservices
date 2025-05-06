@@ -11,4 +11,6 @@ This project is intended for my studies of microservices with Spring. The techno
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
 
-Still under construction, I will also add the architecture diagram here... 🚧
+## System architecture
+
+![System architecture](architecture.PNG)
